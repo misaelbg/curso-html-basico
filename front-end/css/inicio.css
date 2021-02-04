@@ -1,0 +1,28 @@
+.calculadora {
+  width: 250px;
+  height: 400px;
+  border: 2px solid #778899;
+  background-color:#B0C4DE;
+  padding-top: 4px;
+}
+.painel {
+  width: 240px;
+  height: 25px;
+  border: 1px solid #778899;
+  background-color: #2f363d;
+  margin: 0 auto;
+}
+.painel-texto {
+  margin-top: -0px;
+  padding-left: 4px;
+  color: yellow;
+}
+.teclado {
+  display: relative;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 240px;
+  height: 100%;
+  max-height: 350px;
+  border: 1px solid #778899;
+}
