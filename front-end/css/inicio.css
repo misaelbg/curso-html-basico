@@ -25,4 +25,10 @@
   height: 100%;
   max-height: 350px;
   border: 1px solid #778899;
+  padding: 2px !important;
+}
+.botao {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
 }
