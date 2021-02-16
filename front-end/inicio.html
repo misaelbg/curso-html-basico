@@ -7,19 +7,18 @@
   <body>
     <div class="calculadora">
       <div class="painel">
-        <p class="painel-texto">0</p>
+        <p class="painel-texto" id="texto">0</p>
       </div>
 
       <div class="teclado">
-        <button onclick="" class="botao">C</button>
+        <button onclick="resetar()" class="botao">C</button>
         <button onclick="" class="botao"><=</button>
-        <button onclick="" class="botao">%</button>
-        <button onclick="" class="botao">÷</button>
+        <button onclick="addSimbolo('+')" class="botao">+</button>
+        <button onclick="addSimbolo('÷')" class="botao">÷</button>
+        <button value="1" onclick="addValor(1)" class="botao">1</button>
+        <button value="1" onclick="addValor(2)" class="botao">2</button>
       </div>
     </div>
-    <script>
-      // uso de variavel de exemplo com javascript
-      let textoPainel = 'valor teste';
-    </script>
   </body>
+  <script src="./js/calculadora.js"></script>
 </html>
