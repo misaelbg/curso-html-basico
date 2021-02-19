@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>calculadora</title>
+        <link type="favicon/ico" rel="icon" href="./images/favicon.ico" sizes="96x96"></link>  
+        <link rel="stylesheet"  href="./css/inicio.css"></link>
+    </head>
+    <body>
+        <div class="calculadora">
+            <div class="painel">
+                <p class="painel-text" id="texto">0</p>
+            </div>
+
+            <div class="teclado">
+                <div class="esquerda-teclado">
+                    <button onclick="resetar()" class="botao">AC</button>
+                    <button onclick="removerUltimoValor()" class="botao"><=</button>
+                    <button onclick="addSimbolo('%')" class="botao">%</button>
+                    <button onclick="addValor(7)" class="botao">7</button>
+                    <button onclick="addValor(8)" class="botao">8</button>
+                    <button onclick="addValor(9)" class="botao">9</button>
+                    <button onclick="addValor(4)" class="botao">4</button>
+                    <button onclick="addValor(5)" class="botao">5</button>
+                    <button onclick="addValor(6)" class="botao">6</button>
+                    <button onclick="addValor(1)" class="botao">1</button>
+                    <button onclick="addValor(2)" class="botao">2</button>
+                    <button onclick="addValor(3)" class="botao">3</button>
+                    <button onclick="addValor(0)" class="botao botao-zero">0</button>
+                    <button onclick="addValor('.')" class="botao">,</button>
+                   
+                    
+                
+                </div>
+                <div class="direita-teclado">
+                    <button onclick="addSimbolo('÷')" class="botao">÷</button>
+                    <button onclick="addSimbolo('x')" class="botao">x</button>
+                    <button onclick="addSimbolo('-')" class="botao">-</button>
+                    <button onclick="addSimbolo('+')" class="botao">+</button>
+                    <button onclick="calcular()" class="botao">=</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./js/calculadora.js"></script>
+</html>  

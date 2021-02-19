@@ -1,0 +1,67 @@
+.calculadora {
+    width: 200px;
+    height: 290px;
+    border: 2px solid#080808;
+    background-color: #1a1a1a;
+    margin: 0 auto;
+    padding: 4px;
+}
+.painel {
+    width: 100%;
+    margin-right: 4px;
+    height: 70px;
+}
+.painel-text{
+    margin-top: -0px;
+    float: right;
+    color: floralwhite;
+    font-size: 65px;
+    max-height: 10px;
+}
+.teclado{
+    display: relative;
+    margin: 0   auto;
+    width: 95%;
+    height: 100%;
+    max-height: 315px;
+    padding: 3px;
+}
+.botao{ 
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 7px;
+    border-radius: 50%;
+    margin-bottom: 7px;
+    color: floralwhite;
+    font-size: large;
+}
+.esquerda-teclado {
+    float: left;
+    height: 100%;
+    max-width: 75%;
+}
+.esquerda-teclado > button {
+    background-color: #4c4c4c;
+    border: 1px solid #4c4c4c;
+}
+.direita-teclado {
+    float: right;
+    height: 100%;
+    padding-left: 3px;
+    max-width: 22%;
+}
+.direita-teclado > button {
+    background-color: #f8931f;
+    border: 1px solid #f8931f;
+}
+.botao-painel{
+    float: left;
+    height: 100%;
+}
+.botao-zero {
+    width: 80px;
+    border-radius: 18px 18px 18px 18px;
+}
+
+    
