@@ -2,9 +2,9 @@ let simbolo = '';
 let valorAtual = 0;
 let proxValor = 0;
 
-function addValor(valor) {
+let textoDoPainel = 0;
 
-    const paineltexto = window.document.getElementById('texto')
+function addValor(valor) {
     let novoValor = 0;
     
     if(valorAtual) {
@@ -28,11 +28,10 @@ function addValor(valor) {
         novoValor = valorAtual 
     }
 
-    paineltexto.textContent = novoValor
+    alterarValorPainel(novoValor)
 }
 
 function calcular () {
-    const paineltexto = window.document.getElementById('texto')
     let novoValor = 0;
 
     if (simbolo === '÷') {
@@ -49,19 +48,19 @@ function calcular () {
         novoValor = subtrair(valorAtual, proxValor)
     }
 
-    paineltexto.textContent = novoValor
+    alterarValorPainel(novoValor)
     valorAtual = novoValor 
+    simbolo = ''
+    proxValor = 0;
 
 }
 
 function addSimbolo (novoSimbolo) {
-    const paineltexto = window.document.getElementById('texto')
-    const textoAtual = paineltexto.textContent
-    const novoTexto = String(textoAtual) + novoSimbolo
+    const novoTexto = String(textoDoPainel) + novoSimbolo
 
     if (!simbolo) {
         simbolo = novoSimbolo
-        paineltexto.textContent = novoTexto
+        alterarValorPainel(novoTexto)
     }
 }
 
@@ -69,11 +68,10 @@ function dividir(x, y) {
     return Number(x) / Number(y)
 } 
 
-function resetar(C) {
+function resetar() {
     simbolo = '';
     valorAtual = 0;
-    const paineltexto = window.document.getElementById('texto');
-    paineltexto.textContent = 0;
+    alterarValorPainel(0)
     proxValor = 0;
 }
 
@@ -85,4 +83,22 @@ function multiplicar(x, y) {
 }
 function subtrair(x, y) {
     return Number(x) - Number(y)
+}
+function removerUltimoValor() {
+    const textoPainel = painel()
+
+    if (textoDoPainel.length < 2) {
+        resetar()
+    }else {
+        textoDoPainel = textoDoPainel.slice(0,  -1)
+        textoPainel.textContent = textoDoPainel
+    }
+}
+function painel() {
+    return window.document.getElementById('texto')
+}
+function alterarValorPainel(novoValor){
+    const painelTexto = painel()
+    painelTexto.textContent = novoValor
+    textoDoPainel = String(novoValor)
 }
